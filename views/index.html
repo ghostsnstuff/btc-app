@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+	<head>
+		<title>btc stuff</title>
+		<script src='/socket.io/socket.io.js'></script>
+		<script>
+			var socket = io.connect();
+			socket.on('message', function(message) {
+				var data = JSON.parse(message);
+				document.getElementById('btc-last-price').innerHTML = data['last'];
+				document.getElementById('btc-high').innerHTML = data['high'];
+				document.getElementById('btc-low').innerHTML = data['low'];
+				document.getElementById('btc-volume').innerHTML = Number(data['volume']).toFixed(2);
+				document.getElementById('btc-bid').innerHTML = data['bid'];
+				document.getElementById('btc-ask').innerHTML = data['ask'];
+				document.getElementById('btc-timestamp').innerHTML = new Date(data['timestamp']*1000).toLocaleTimeString();
+			});
+		</script>
+		<link rel='stylesheet' href='public/css/style.css'/>
+		<meta name='viewport' content='width:device-width' initial-scale='1'>
+	</head>
+	<div id='line'></div>
+	<body>		
+		<div id='title'>
+			<div>BTC n stuff</div>
+		</div>
+		<table>
+			<tr class='btc-data'>
+				<td class='btc-name'>last price</td>
+				<td id='btc-last-price' class='btc-value'></td>
+			</tr>
+			</br>	
+			<tr class='btc-data'>
+				<td class='btc-name'>high(24hr)</td>
+				<td id='btc-high' class='btc-value'></td>
+			</tr>
+			</br>
+			<tr class='btc-data'>
+				<td class='btc-name'>low(24hr)</td>
+				<td id='btc-low' class='btc-value'></td>
+			</tr>
+			</br>
+			<tr class='btc-data'>
+				<td class='btc-name'>volume(24hr)</td>
+				<td id='btc-volume' class='btc-value'></td>
+			</tr>
+			</br>
+			<tr class='btc-data'>
+				<td class='btc-name'>bid(highest)</td>
+				<td id='btc-bid' class='btc-value'></td>
+			</tr>
+			</br>
+			<tr class='btc-data'>
+				<td class='btc-name'>ask(lowest)</td>
+				<td id='btc-ask' class='btc-value'></td>
+			</tr>
+			</br>
+			<tr class='btc-data'>
+				<td class='btc-name' style='font-style:italic;position:relative;left:-2px;'>last updated </td>
+				<td id='btc-timestamp' class='btc-value'></td>
+			</tr>
+		</table>
+		<div>
+		<audio id="boo" src="../public/audio/mario_jump.wav">
+		</audio>
+    <img onclick="document.getElementById('boo').play();" src='http://mmii.info/icons/Koole321/Mario_PlainBoo.gif' style='height:50px;width:50px;'>
+	</body>
+</html>
