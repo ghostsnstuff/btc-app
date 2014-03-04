@@ -1,46 +1,46 @@
 #line {
-	height:3px;
-	background-color:#348eda;
+  height:3px;
+  background-color:#348eda;
 }
 body {
-	margin:auto;
-	font-family:courier;
-	font-size:12px;
-	background-color:#f4f4f2;
-	color:#333;
+  margin:auto;
+  font-family:courier;
+  font-size:12px;
+  background-color:#f4f4f2;
+  color:#333;
 } 
 #title {
-	margin:10px;
-	font-weight:bold;
+  margin:10px;
+  font-weight:bold;
   margin-left:30px;
-	margin-top:30px;
-	font-size:13px;
+  margin-top:30px;
+  font-size:13px;
 }
 table {
-	border:0px solid red;
-	position:relative;
-	top:-85px;
-	left:23px;
+  border:0px solid red;
+  position:relative;
+  top:-85px;
+  left:23px;
 }
 td {
-	padding:5px;
+  padding:5px;
 }
 .btc-data {
-	width:300px;
+  width:300px;
 }
 .btc-value {
-	padding-left:10px;
+  padding-left:10px;
 }
 #btc-timestamp {
-	font-style:italic;
+  font-style:italic;
 }
 img {
-	position:fixed;
-	right:0px;
-	bottom:-4px;
+  position:fixed;
+  right:0px;
+  bottom:-4px;
 }
 a {
-	text-decoration:none;
-	color:black;
-	font-weight:lighter;
+  text-decoration:none;
+  color:black;
+  font-weight:lighter;
 }
